@@ -20,10 +20,10 @@ function sibambu_theme_setup() {
 add_action( 'after_setup_theme', 'sibambu_theme_setup' );
 
 function sibambu_enqueue_scripts() {
-    // Google Fonts: Plus Jakarta Sans
-    wp_enqueue_style( 'google-fonts-plus-jakarta', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap', array(), null );
+    // Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body)
+    wp_enqueue_style( 'google-fonts-sibambu', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap', array(), null );
     
     // Theme Main Stylesheet
-    wp_enqueue_style( 'sibambu-style', get_stylesheet_uri(), array( 'google-fonts-plus-jakarta' ), '1.0.0' );
+    wp_enqueue_style( 'sibambu-style', get_stylesheet_uri(), array( 'google-fonts-sibambu' ), '1.1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'sibambu_enqueue_scripts' );
